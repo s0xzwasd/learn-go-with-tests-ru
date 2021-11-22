@@ -1,50 +1,51 @@
-# Learn Go with Tests
+# Изучите Go через тестирование
 
-<p align="center">
-  <img src="red-green-blue-gophers-smaller.png" />
+<p>
+  <img src="red-green-blue-gophers-smaller.png"  alt="Три гофера разных цветов: один думает о еде, другой готовит, третий убирает. Надпись: Red, Green, Refactor."/>
 </p>
 
-[Art by Denise](https://twitter.com/deniseyu21)
+[Обложка нарисована Denise](https://twitter.com/deniseyu21)
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/quii/learn-go-with-tests)](https://goreportcard.com/report/github.com/quii/learn-go-with-tests)
 
-## Formats
+## Форматы для чтения
 
-- [Gitbook](https://quii.gitbook.io/learn-go-with-tests)
-- [EPUB or PDF](https://github.com/quii/learn-go-with-tests/releases)
+- [Gitbook](https://s0xzwasd.gitbook.io/learn-go-with-tests/)
+- [EPUB or PDF](https://github.com/s0xzwasd/learn-go-with-tests/releases)
 
-## Translations
+## Доступные переводы
 
+- [English](https://quii.gitbook.io/learn-go-with-tests)
 - [中文](https://studygolang.gitbook.io/learn-go-with-tests)
 - [Português](https://larien.gitbook.io/aprenda-go-com-testes/)
 - [日本語](https://andmorefine.gitbook.io/learn-go-with-tests/)
 - [한국어](https://miryang.gitbook.io/learn-go-with-tests/)
 - [Türkçe](https://halilkocaoz.gitbook.io/go-programlama-dilini-ogren/)
 
-## Support me
+## Поддержите меня
 
-I am proud to offer this resource for free, but if you wish to give some appreciation:
+Я горжусь тем, что предлагаю эту книгу для свободного использования, бесплатно. Однако, если вы хотите поддержать меня или выразить благодарность, то можете воспользоваться следующими пунктами:
 
-- [Tweet me @quii](https://twitter.com/quii)
-- [Buy me a coffee :coffee:](https://www.buymeacoffee.com/quii)
-- [Sponsor me on GitHub](https://github.com/sponsors/quii)
+- [Отметьте меня в Твиттере: @quii](https://twitter.com/quii)
+- [Купите чашку кофе :coffee:](https://www.buymeacoffee.com/quii)
+- [Поддержите проект на GitHub](https://github.com/sponsors/quii)
 
-## Why
+## Почему мне стоит это читать?
 
-* Explore the Go language by writing tests
-* **Get a grounding with TDD**. Go is a good language for learning TDD because it is a simple language to learn and testing is built-in
-* Be confident that you'll be able to start writing robust, well-tested systems in Go
-* [Watch a video, or read about why unit testing and TDD is important](why.md)
+* Узнайте о языке Go с помощью написания тестов.
+* **Погрузитесь в TDD с головой**. Go хороший язык для этого, потому-что он прост для изучения и в нём отлично реализованы тесты из коробки.
+* Получите уверенность, что вы можете писать надежные и хорошо протестированные системы на Go.
+* [Посмотрите видео или почитайте](why.md), почему юнит-тестирование и TDD важны.
 
-## Table of contents
+## Оглавление
 
-### Go fundamentals
+### Основы Go
 
-1. [Install Go](install-go.md) - Set up environment for productivity.
-2. [Hello, world](hello-world.md) - Declaring variables, constants, if/else statements, switch, write your first go program and write your first test. Sub-test syntax and closures.
-3. [Integers](integers.md) - Further Explore function declaration syntax and learn new ways to improve the documentation of your code.
-4. [Iteration](iteration.md) - Learn about `for` and benchmarking.
-5. [Arrays and slices](arrays-and-slices.md) - Learn about arrays, slices, `len`, varargs, `range` and test coverage.
+1. [Установка Go](install-go.md) - Настройте рабочее окружение для комфортной работы.
+2. [Привет, мир!](hello-world.md) - Объявляйте переменные, константы, используйте ветвления, напишите вашу первую программу на Go и тест для неё. Синтаксис подтестов и замыканий.
+3. [Числа](integers.md) - Укрепите знания синтаксиса для функций и изучите новые пути улучшения документации вашего кода.
+4. [Циклы](iteration.md) - Узнайте о цикле `for` и для чего нужны бенчмарки.
+5. [Массивы и Слайсы](arrays-and-slices.md) - Learn about arrays, slices, `len`, varargs, `range` and test coverage.
 6. [Structs, methods & interfaces](structs-methods-and-interfaces.md) - Learn about `struct`, methods, `interface` and table driven tests.
 7. [Pointers & errors](pointers-and-errors.md) - Learn about pointers and errors.
 8. [Maps](maps.md) - Learn about storing values in the map data structure.
@@ -143,23 +144,22 @@ What I like to do is explore concepts and then solidify the ideas with tests. Te
 
 Taking my experience of learning with a group and my own personal way I am going to try and create something that hopefully proves useful to other teams. Learning the fundamentals by writing small tests so that you can then take your existing software design skills and ship some great systems.
 
-## Who this is for
+## Для кого эта книга
 
-* People who are interested in picking up Go.
-* People who already know some Go, but want to explore testing with TDD.
+* Любому, кто заинтересовался в изучении Go.
+* Любому, кто уже немного знаком с Go, но хочет изучить TDD подход.
 
-## What you'll need
+## Что мне потребуется для прохождения?
 
-* A computer!
-* [Installed Go](https://golang.org/)
-* A text editor
-* Some experience with programming. Understanding of concepts like `if`, variables, functions etc.
-* Comfortable with using the terminal
+* Компьютер и установленный терминал, которым вы хорошо пользуетесь.
+* Установленный [Go](https://golang.org/).
+* Текстовый редактор кода.
+* Небольшие познания в программировании. Понимание концепции ветвлений, что такое переменная, функция и т.д
 
-## Feedback
+## Обратная связь
 
-* Add issues/submit PRs [here](https://github.com/quii/learn-go-with-tests) or [tweet me @quii](https://twitter.com/quii)
+* Создавайте новые тикеты/предлагайте изменения [здесь](https://github.com/s0xzwasd/learn-go-with-tests) или отметьте меня в [Twitter](https://twitter.com/quii).
 
-[MIT license](LICENSE.md)
+[Лицензия MIT](LICENSE.md)
 
-[Logo is by egonelbre](https://github.com/egonelbre) What a star!
+[Логотип нарисовал egonelbre](https://github.com/egonelbre), спасибо!
