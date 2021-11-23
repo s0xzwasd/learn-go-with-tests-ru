@@ -45,20 +45,20 @@
 2. [Привет, мир!](hello-world.md) - Объявляйте переменные, константы, используйте ветвления, напишите вашу первую программу на Go и тест для неё. Синтаксис подтестов и замыканий.
 3. [Числа](integers.md) - Укрепите знания синтаксиса для функций и изучите новые пути улучшения документации вашего кода.
 4. [Циклы](iteration.md) - Узнайте о цикле `for` и для чего нужны бенчмарки.
-5. [Массивы и Слайсы](arrays-and-slices.md) - Learn about arrays, slices, `len`, varargs, `range` and test coverage.
-6. [Structs, methods & interfaces](structs-methods-and-interfaces.md) - Learn about `struct`, methods, `interface` and table driven tests.
-7. [Pointers & errors](pointers-and-errors.md) - Learn about pointers and errors.
-8. [Maps](maps.md) - Learn about storing values in the map data structure.
-9. [Dependency Injection](dependency-injection.md) - Learn about dependency injection, how it relates to using interfaces and a primer on io.
-10. [Mocking](mocking.md) - Take some existing untested code and use DI with mocking to test it.
-11. [Concurrency](concurrency.md) - Learn how to write concurrent code to make your software faster.
-12. [Select](select.md) - Learn how to synchronise asynchronous processes elegantly.
-13. [Reflection](reflection.md) - Learn about reflection
-13. [Sync](sync.md) - Learn some functionality from the sync package including `WaitGroup` and `Mutex`
-13. [Context](context.md) - Use the context package to manage and cancel long-running processes
-14. [Intro to property based tests](roman-numerals.md) - Practice some TDD with the Roman Numerals kata and get a brief intro to property based tests
-15. [Maths](math.md) - Use the `math` package to draw an SVG clock
-16. [Reading files](reading-files.md) - Read files and process them
+5. [Массивы и Слайсы](arrays-and-slices.md) - Научитесь работать с массивами, слайсами, `len`, `range`, изучите вариативные функции и покройте тестами программу.
+6. [Структуры, методы и интерфейсы](structs-methods-and-interfaces.md) - Погрузитесь в методы, узнайте об интерфейсах, структурах и табличных тестах.
+7. [Указатели и ошибки](pointers-and-errors.md) - Узнайте об указателях и обработке ошибок в Go.
+8. [Карты](maps.md) - Научитесь пользоваться картами для хранения данных.
+9. [Управление зависимостями](dependency-injection.md) - Получите представления об управлении зависимости и как это связано с использованием интерфейсов и пакета `io`.
+10. [Мокинг (имитация)](mocking.md) - Возьмите существующий не протестированный код и используйте DI с мокингом для написания тестов.
+11. [Многопоточность](concurrency.md) - Узнайте как писать многопоточный код и как сделать вашу программу быстрее.
+12. [Оператор Select](select.md) - Научитесь красиво и элегантно синхронизировать асинхронные процессы.
+13. [Рефлексия](reflection.md) - Получите основы о рефлексии в Go.
+13. [Синхронизация](sync.md) - Узнайте о пакете `sync`, который включает в себя `WaitGroup` и `Mutex`.
+13. [Использование context](context.md) - Используйте пакет `context` для управления и закрытия долгих процессов.
+14. [Property-based testing (использование предикатов)](roman-numerals.md) - Попрактикуйтесь в TDD с помощью Roman Numerals заданий и получите основы PBT.
+15. [Использование math](math.md) - Научитесь использовать пакет `math` и нарисуйте часы с использованием SVG.
+16. [Чтение файлов](reading-files.md) - Читайте файлы и обрабатывайте их.
 
 ### Build an application
 
