@@ -102,29 +102,29 @@
 * Прочитайте как правильно [контрибьютить](https://github.com/quii/learn-go-with-tests/tree/842f4f24d1f1c20ba3bb23cbc376c7ca6f7ca79a/contributing.md) в проект.
 * Есть идеи? Создайте новый запрос!
 
-## Background
+## Обо мне
 
-I have some experience introducing Go to development teams and have tried different approaches as to how to grow a team from some people curious about Go into highly effective writers of Go systems.
+У меня есть опыт обучения Go для разработчиков и я попробовал разные пути: от команды, которая просто интересуется Go, до написания высокоэффективных систем на языке.
 
-### What didn't work
+### Не работающие подходы
 
-#### Read _the_ book
+#### Прочитать книгу
 
-An approach we tried was to take [the blue book](https://www.amazon.co.uk/Programming-Language-Addison-Wesley-Professional-Computing/dp/0134190440) and every week discuss the next chapter along with the exercises.
+Мы пробовали применить подход, который обсуждался в [синей книге](https://www.amazon.co.uk/Programming-Language-Addison-Wesley-Professional-Computing/dp/0134190440)  и каждую неделю обсуждать следующую главу вместе с решением задач.
 
-I love this book but it requires a high level of commitment. The book is very detailed in explaining concepts, which is obviously great but it means that the progress is slow and steady - this is not for everyone.
+Мне нравится эта книга, но она требует высокий уровень вовлеченности. Эта книга детально описывает концепты, которые в целом полезны, но это значит что прогресс будет медленным и незаметным – это не для всех.
 
-I found that whilst a small number of people would read chapter X and do the exercises, many people didn't.
+Небольшое количество людей хотело бы прочитать главу X и решать задачу, при этом большинство людей этого не делали.
 
-#### Solve some problems
+#### Решать часть задач
 
-Katas are fun but they are usually limited in their scope for learning a language; you're unlikely to use goroutines to solve a kata.
+Решение задач интересное занятие, но обычно их полезность довольна мала при изучении языка. Мы вряд ли будем использовать горутины для решения каких-то задач.
 
-Another problem is when you have varying levels of enthusiasm. Some people just learn way more of the language than others and when demonstrating what they have done end up confusing people with features the others are not familiar with.
+Другая проблема, когда у вас есть несколько уровней энтузиазма. Некоторые люди просто хотят изучить больше концепций языка чем другие и, когда они показывают что они уже сделали, то заканчивают особенностями языка, о котором другие не знают.
 
-This ends up making the learning feel quite _unstructured_ and _ad hoc_.
+Это создает в обучении проблемы, вызывает не структурированность и отсутствие документации, тестов.
 
-### What did work
+### Работающие подходы
 
 By far the most effective way was by slowly introducing the fundamentals of the language by reading through [go by example](https://gobyexample.com/), exploring them with examples and discussing them as a group. This was a more interactive approach than "read chapter x for homework".
 
@@ -134,13 +134,13 @@ This to me seems analogous to practicing scales when trying to learn guitar.
 
 It doesn't matter how artistic you think you are, you are unlikely to write good music without understanding the fundamentals and practicing the mechanics.
 
-### What works for me
+### Работающие подходы для меня
 
-When _I_ learn a new programming language I usually start by messing around in a REPL but eventually, I need more structure.
+Когда я изучаю новый язык программирования, я обычно начинаю с каких-то примеров кода и запускаю их в песочнице, но в основном я приверженец определенной структурированности.
 
-What I like to do is explore concepts and then solidify the ideas with tests. Tests verify the code I write is correct and documents the feature I have learned.
+Я бы хотел изучить основные концепты и затем укрепить их с помощью идей с тестами. Тесты подтверждают, что мой код корректен и документируют особенности, которые я изучил.
 
-Taking my experience of learning with a group and my own personal way I am going to try and create something that hopefully proves useful to other teams. Learning the fundamentals by writing small tests so that you can then take your existing software design skills and ship some great systems.
+Из моего опыта обучения с группой или самостоятельно, я пытаюсь попробовать создать что-то, что может быть полезно другим разработчикам и командам. Написание маленьких тестов поможет улучшить ваши навыки в проектировании программного обеспечения и даст основы для новых высокоэффективных систем.
 
 ## Для кого эта книга
 
