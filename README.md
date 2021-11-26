@@ -126,13 +126,13 @@
 
 ### Работающие подходы
 
-By far the most effective way was by slowly introducing the fundamentals of the language by reading through [go by example](https://gobyexample.com/), exploring them with examples and discussing them as a group. This was a more interactive approach than "read chapter x for homework".
+До этого момента самый эффективный путь был медленно изучать основы языка с помощью [go by example](https://gobyexample.com/), пробовать их запустить локально и смотреть на общую картину. Это немного более интерактивный подход, чем "прочитай главу X и выполни домашнее задание".
 
-Over time the team gained a solid foundation of the _grammar_ of the language so we could then start to build systems.
+После этого вы получаете прочную базу по грамматике языка и поэтому можете начать проектировать какие-либо системы.
 
-This to me seems analogous to practicing scales when trying to learn guitar.
+Это можно сравнить с практикой игры на гитаре, когда вы начинаете изучать гаммы и как их играть.
 
-It doesn't matter how artistic you think you are, you are unlikely to write good music without understanding the fundamentals and practicing the mechanics.
+При этом не важно насколько вы артистичны, так как вряд ли вы напишите хорошую музыку без понимания основ и практики игры.
 
 ### Работающие подходы для меня
 
