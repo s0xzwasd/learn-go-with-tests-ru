@@ -1,52 +1,55 @@
-# Install Go, set up environment for productivity
+# Установка Go, настройка рабочего окружения для комфортной работы
 
-The official installation instructions for Go are available [here](https://golang.org/doc/install).
+Найти официальный гайд по установке GO можно [здесь](https://golang.org/doc/install).
 
-This guide will assume that you are using a package manager for e.g. [Homebrew](https://brew.sh), [Chocolatey](https://chocolatey.org), [Apt](https://help.ubuntu.com/community/AptGet/Howto) or [yum](https://access.redhat.com/solutions/9934).
+Этот гайд подразумевает, что у вас есть менеджер пакетов, например [Homebrew](https://brew.sh) для macOS, [Chocolatey](https://chocolatey.org) для Windows, [Apt](https://help.ubuntu.com/community/AptGet/Howto) для Ubuntu или [yum](https://access.redhat.com/solutions/9934) для Linux дистрибутивов.
+
+Для демонстрации приведен пример установки для macOS с помощью Homebrew.
 
 For demonstration purposes we will show the installation procedure for OSX using Homebrew.
 
-## Installation
+## Установка
 
-The process of installation is very easy. First, what you have to do is to run this command to install homebrew. It has a dependency on Xcode so you should ensure this is installed first.
+Процесс установки предельно прост. Сначала нужно установить Homebrew, но который имеет зависимость с XCode, поэтому сначала убедитесь или установите XCode Command Line Tools.
 
 ```sh
 xcode-select --install
 ```
 
-Then you run the following to install homebrew:
+Затем запустите следующую команду для установки Homebrew:
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-At this point you can now install Go with:
+С этого момента у вас есть возможность установить Go командой:
 
 ```sh
 brew install go
 ```
 
-*You should follow any instructions recommended by your package manager. **Note** these may be host os specific*.
+*Вы должны следовать инструкция по установки вашего пакетного менеджера. Обратите внимание, что здесь могут быть OS-специфичные требования.
 
-You can verify the installation with:
+Вы можете убедиться, что Go установлен, командой:
 
 ```sh
 $ go version
-go version go1.14 darwin/amd64
+go version go1.17 darwin/amd64
 ```
 
-## Go Environment
+## Настройка окружения для Go
 
 ### Go Modules
-Go 1.11 introduced [Modules](https://github.com/golang/go/wiki/Modules). This approach is the default build mode since Go 1.16, therefore the use of `GOPATH` is not recommended.
 
-Modules aim to solve problems related to dependency management, version selection and reproducible builds; they also enable users to run Go code outside of `GOPATH`.
+Go версии 1.11 представил новый подход, который называется [модули](https://github.com/golang/go/wiki/Modules) или Go modules. Он стал стандартом начиная с Go 1.16, поэтому _использование `GOPATH` не рекомендуется_. Вы можете встретить использование `GOPATH` в старых обучающих материалах и статьях.
 
-Using Modules is pretty straightforward. Select any directory outside `GOPATH` as the root of your project, and create a new module with the `go mod init` command.
+Модули призваны решить проблемы, связанные с управлением зависимостями, выбора нужной версии и надежной и предсказуемой сборки проекта. Подход также позволяет программисту запускать Go-код за пределами `GOPATH`.
 
-A `go.mod` file will be generated, containing the module path, a Go version, and its dependency requirements, which are the other modules needed for a successful build.
+Использование модулей довольно простое. Выберите любую директорию за пределами `GOPATH` как основную директорию вашего проекта, и создайте новый модуль внутри с помощью команды `go mod init`.
 
-If no `<modulepath>` is specified, `go mod init` will try to guess the module path from the directory structure. It can also be overridden by supplying an argument.
+После выполнения команды создастся файл `go.mod`, который содержит путь к модулю и версию Go, что требуется для корректной работы модуля при его экспорте и использовании в других проектах.
+
+Если путь до модуля не указан, то `go mod init` попытается предсказать путь до модуля основываясь на структуре проекта. Это также можно изменить, передав аргумент в эту команду.
 
 ```sh
 mkdir my-project
