@@ -1,27 +1,27 @@
-# Table of contents
+# Оглавление
 
-* [Learn Go with Tests](gb-readme.md)
+* [Изучение Go через тестирование](gb-readme.md)
 
-## Go fundamentals
+## Основы Go
 
-* [Install Go](install-go.md)
-* [Hello, World](hello-world.md)
-* [Integers](integers.md)
-* [Iteration](iteration.md)
-* [Arrays and slices](arrays-and-slices.md)
-* [Structs, methods & interfaces](structs-methods-and-interfaces.md)
-* [Pointers & errors](pointers-and-errors.md)
-* [Maps](maps.md)
-* [Dependency Injection](dependency-injection.md)
-* [Mocking](mocking.md)
-* [Concurrency](concurrency.md)
-* [Select](select.md)
-* [Reflection](reflection.md)
-* [Sync](sync.md)
-* [Context](context.md)
-* [Intro to property based tests](roman-numerals.md)
-* [Maths](math.md)
-* [Reading files](reading-files.md)
+* [Установка Go](install-go.md)
+* [Привет, мир!](hello-world.md)
+* [Числа](integers.md)
+* [Циклы](iteration.md)
+* [Массивы и Слайсы](arrays-and-slices.md)
+* [Структуры, методы и интерфейсы](structs-methods-and-interfaces.md)
+* [Указатели и ошибки](pointers-and-errors.md)
+* [Карты](maps.md)
+* [Управление зависимостями](dependency-injection.md)
+* [Мокинг (имитация)](mocking.md)
+* [Многопоточность](concurrency.md)
+* [Оператор Select](select.md)
+* [Рефлексия](reflection.md)
+* [Синхронизация](sync.md)
+* [Использование context](context.md)
+* [Property-based testing (использование предикатов)](roman-numerals.md)
+* [Использование math](math.md)
+* [Чтение файлов](reading-files.md)
 
 ## Build an application
 
