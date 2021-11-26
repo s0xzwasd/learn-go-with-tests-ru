@@ -8,11 +8,6 @@
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/quii/learn-go-with-tests)](https://goreportcard.com/report/github.com/quii/learn-go-with-tests)
 
-## Форматы для чтения
-
-- [Gitbook](https://s0xzwasd.gitbook.io/learn-go-with-tests/)
-- [EPUB or PDF](https://github.com/s0xzwasd/learn-go-with-tests/releases)
-
 ## Доступные переводы
 
 - [English](https://quii.gitbook.io/learn-go-with-tests)
