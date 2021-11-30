@@ -1,11 +1,11 @@
-# Hello, World
+# Привет, мир!
 
-**[You can find all the code for this chapter here](https://github.com/quii/learn-go-with-tests/tree/main/hello-world)**
+**Весь код для этой главы вы можете найти [здесь](https://github.com/s0xzwasd/learn-go-with-tests-ru/tree/main/hello-world)**.
 
-It is traditional for your first program in a new language to be [Hello, World](https://en.m.wikipedia.org/wiki/%22Hello,_World!%22_program).
+Программирование на любом языке начинается с [Hello, World](https://en.m.wikipedia.org/wiki/%22Hello,_World!%22_program).
 
-- Create a folder wherever you like
-- Put a new file in it called `hello.go` and put the following code inside it
+- Создайте новую директорию в любом месте на вашем компьютере.
+- Создайте новый файл `hello.go ` и вставьте в него следующий код:
 
 ```go
 package main
@@ -17,7 +17,7 @@ func main() {
 }
 ```
 
-To run it type `go run hello.go`.
+Затем запустите данный код командой `go run hello.go`.
 
 ## How it works
 
