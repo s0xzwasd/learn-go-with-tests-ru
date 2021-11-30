@@ -23,27 +23,27 @@
 * [Использование math](math.md)
 * [Чтение файлов](reading-files.md)
 
-## Build an application
+## Создание приложения
 
-* [Intro](app-intro.md)
-* [HTTP server](http-server.md)
-* [JSON, routing and embedding](json.md)
-* [IO and sorting](io.md)
-* [Command line & package structure](command-line.md)
-* [Time](time.md)
-* [WebSockets](websockets.md)
+* [Введение](app-intro.md)
+* [HTTP-сервер](http-server.md)
+* [JSON, маршрутизация и вложения](json.md)
+* [IO и сортировка](io.md)
+* [Командная строка и структура проекта](command-line.md)
+* [Пакет time](time.md)
+* [Веб-сокеты](websockets.md)
 
-## Questions and answers
+## Частые вопросы и ответы
 
-* [OS Exec](os-exec.md)
-* [Error types](error-types.md)
-* [Context-aware Reader](context-aware-reader.md)
-* [Revisiting HTTP Handlers](http-handlers-revisited.md)
+* [Вызовы OS-команд](os-exec.md)
+* [Создание собственных ошибок](error-types.md)
+* [Context-независимый Reader](context-aware-reader.md)
+* [Проектирование HTTP-хандлеров](http-handlers-revisited.md)
 
-## Meta
+## Дополнительно
 
-* [Why unit tests and how to make them work for you](why.md)
-* [Anti-patterns](anti-patterns.md)
-* [Intro to generics](intro-to-generics.md)
-* [Contributing](contributing.md)
-* [Chapter Template](template.md)
+* [Почему стоит использовать юнит-тесты?](why.md)
+* [Анти-паттерны](anti-patterns.md)
+* [Введение в дженерики](intro-to-generics.md)
+* [Как контрибьютить в проект](contributing.md)
+* [Шаблон глав](template.md)
