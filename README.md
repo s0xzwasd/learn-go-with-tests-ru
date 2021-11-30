@@ -10,7 +10,7 @@
 
 ## Форматы для чтения
 
-- [Gitbook](https://s0xzwasd.gitbook.io/learn-go-with-tests/)
+- [Gitbook](https://s0xzwasd.gitbook.io/learn-go-with-tests-ru/)
 - [EPUB or PDF](https://github.com/s0xzwasd/learn-go-with-tests/releases)
 
 ## Доступные переводы
