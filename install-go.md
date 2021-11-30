@@ -1,6 +1,6 @@
 # Установка Go, настройка рабочего окружения для комфортной работы
 
-Найти официальный гайд по установке GO можно [здесь](https://golang.org/doc/install).
+Найти официальный гайд по установке Go можно [здесь](https://golang.org/doc/install).
 
 Этот гайд подразумевает, что у вас есть менеджер пакетов, например [Homebrew](https://brew.sh) для macOS, [Chocolatey](https://chocolatey.org) для Windows, [Apt](https://help.ubuntu.com/community/AptGet/Howto) для Ubuntu или [yum](https://access.redhat.com/solutions/9934) для Linux дистрибутивов.
 
@@ -55,88 +55,81 @@ cd my-project
 go mod init <modulepath>
 ```
 
-A `go.mod` file could look like this:
+`go.mod` файл будет выглядеть примерно как показано ниже:
 
 ```
 module cmd
 
-go 1.16
+go 1.17
 
 ```
-
-The built-in documentation provides an overview of all available `go mod` commands.
+Вы можете вызвать Go документацию с помощью следующих команд.
 
 ```sh
 go help mod
 go help mod init
 ```
 
-## Go Editor
+## Редактор кода
 
-Editor preference is very individualistic, you may already have a preference that supports Go. If you don't you should consider an Editor such as [Visual Studio Code](https://code.visualstudio.com), which has exceptional Go support.
-
-You can install it using the following command:
+Выбор редактора кода всегда индвидуален, возможно у вас уже есть предпочтение в этом вопросе. Главное, чтобы ваш редактор поддерживал Go. Как один из вариантов вы можете рассмотреть [Visual Studio Code](https://code.visualstudio.com) и установить его с помощью следующей команды:
 
 ```sh
 brew install --cask visual-studio-code
 ```
 
-You can confirm VS Code installed correctly you can run the following in your shell.
+После установки вы можете проверить, что VS Code установлен правильно, выполнив следующую команду в вашем терминале:
 
 ```sh
 code .
 ```
 
-VS Code is shipped with very little software enabled, you can enable new software by installing extensions. To add Go support you must install an extension, there are a variety available for VS Code, an exceptional one is [Luke Hoban's package](https://github.com/golang/vscode-go). This can be installed as follows:
+VS Code поставляется с небольшим количеством функционала, но вы можете его расширить, установив плагины. Для поддержки Go нужно установить [плагин](https://marketplace.visualstudio.com/items?itemName=golang.go) командой:
 
 ```sh
 code --install-extension golang.go
 ```
 
-When you open a Go file for the first time in VS Code, it will indicate that the Analysis tools are missing, you should click the button to install these. The list of tools that gets installed (and used) by VS Code are available [here](https://github.com/golang/vscode-go/blob/master/docs/tools.md).
+Когда вы откроете Go файл первый раз в VS Code, вам будет предложено установить инструменты для анализа кода. Вы можете посмотреть список этих инструментов [здесь](https://github.com/golang/vscode-go/blob/master/docs/tools.md).
 
-## Go Debugger
+## Дебагер для Go
 
-A good option for debugging Go (that's integrated with VS Code) is Delve. This can be installed as follows:
+Стандартом для отладки Go кода является (также включен в VS Code) [Delve](https://github.com/go-delve/delve). Его можно установить командой:
 
 ```sh
 go get -u github.com/go-delve/delve/cmd/dlv
 ```
 
-For additional help configuring and running the Go debugger in VS Code, please reference the [VS Code debugging documentation](https://github.com/golang/vscode-go/blob/master/docs/debugging.md).
+Для дополнительной информации по настройке и запуску отладки в VS Code, можете посмотреть [документацию из официального репозитория плагина](https://github.com/golang/vscode-go/blob/master/docs/debugging.md).
 
-## Go Linting
+## Линтеры для Go
 
-An improvement over the default linter can be configured using [GolangCI-Lint](https://golangci-lint.run).
-
-This can be installed as follows:
+Помимо стандартного линтера в Go вы можете также использовать [golangci-lint](https://golangci-lint.run), который можно установить командой:
 
 ```sh
-brew install golangci/tap/golangci-lint
+brew install golangci-lint
 ```
 
-## Refactoring and your tooling
+## Рефакторинг кода
 
-A big emphasis of this book is around the importance of refactoring.
+Красной нитью во всей книге является важность рефакторинга. Ваши инструменты могут позволить вам делать больше рефакторинга и быть уверенным в конечном результате.
 
-Your tools can help you do bigger refactoring with confidence.
+Стоит ознакомиться с вашим редактором кода и изучить базовые комбинации горячих клавиш:
 
-You should be familiar enough with your editor to perform the following with a simple key combination:
+- **Extract/Inline variable**. Позволяет взять "магические числа" из вашего кода и дать им имена, что упростит код и его читаемость в несколько шагов.
+- **Extract method/function**. Важно иметь возможность взять часть кода и вынести его в отдельную функцию или метод.
+- **Rename**. Вы должны быть уверены, что можете изменить имя символов (переменной, функции и т.д) быстро в нескольких файлах. Ручной рефакторинг утомляет и занимает много времени.
+- **go fmt**. В Go есть стандартный форматтер вашего кода, который называется `go fmt`. Ваш редактор должен запускать его при каждом сохранении файла.
+- **Run tests**. Вы должны иметь возможность запускать ваши тесты и быстро их перезапускать, чтобы убеждаться, что рефакторинг не повредил логику в коде.
 
-- **Extract/Inline variable**. Being able to take magic values and give them a name lets you simplify your code quickly
-- **Extract method/function**. It is vital to be able to take a section of code and extract functions/methods
-- **Rename**. You should be able to confidently rename symbols across files.
-- **go fmt**. Go has an opinioned formatter called `go fmt`. Your editor should be running this on every file save.
-- **Run tests**. It goes without saying that you should be able to do any of the above and then quickly re-run your tests to ensure your refactoring hasn't broken anything
+Есть также дополнительные инструменты, которые помогут работать с кодом:
 
-In addition, to help you work with your code you should be able to:
+- **View function signature** - Вам никогда не нужно задумываться о том, как правильно вызвать функцию. Ваша IDE должна описывать и показывать документацию по функции, какие у неё параметры и какое значение она возвращает.
+- **View function definition** - Если неясно, что делает функция, то у вас должна быть возможность быстро посмотреть исходный код функции и разобраться что происходит.
+- **Find usages of a symbol** - Вы можете посмотреть как используется функция в контексте других частей приложения, что может помочь выбрать правильный процесс при рефакторинге.
 
-- **View function signature** - You should never be unsure how to call a function in Go. Your IDE should describe a function in terms of its documentation, its parameters and what it returns.
-- **View function definition** - If it's still not clear what a function does, you should be able to jump to the source code and try and figure it out yourself.
-- **Find usages of a symbol** - Being able to see the context of a function being called can help your decision process when refactoring.
+Идеальное владение инструментами поможет концентрироваться на написании кода и снизить когнитивную нагрузку при переключении с одной задачи на другую.
 
-Mastering your tools will help you concentrate on the code and reduce context switching.
+## Итоги
 
-## Wrapping up
-
-At this point you should have Go installed, an editor available and some basic tooling in place. Go has a very large ecosystem of third party products. We have identified a few useful components here, for a more complete list see https://awesome-go.com.
+Вы установили Go, выбрали редактор кода и настроили базовые инструменты для дальнейшей работы. У Go очень большая экосистема и большой выбор инструментов под каждую задачу. Мы рассмотрели только несколько из них, однако вы можете пойти дальше и посмотреть доступные инструменты на https://awesome-go.com.
