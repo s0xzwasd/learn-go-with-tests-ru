@@ -19,19 +19,19 @@ func main() {
 
 Затем запустите данный код командой `go run hello.go`.
 
-## How it works
+## Как это устроено?
 
-When you write a program in Go you will have a `main` package defined with a `main` func inside it. Packages are ways of grouping up related Go code together.
+Когда вы пишете программы на Go, у вас должен быть пакет `main` с объявленной внутри одноименной функцией. Пакеты это способ группировки связанного кода вместе.
 
-The `func` keyword is how you define a function with a name and a body.
+Ключевое слово `func` это объявление функции, которое состоит из имени и тела.
 
-With `import "fmt"` we are importing a package which contains the `Println` function that we use to print.
+С помощью `import "fmt"` мы импортируем пакет, который содержит функцию `Println` и она необходима нам, чтобы вывести сообщение на экран.
 
-## How to test
+## Как это протестировать?
 
-How do you test this? It is good to separate your "domain" code from the outside world \(side-effects\). The `fmt.Println` is a side effect \(printing to stdout\) and the string we send in is our domain.
+Итак, как можно протестировать данную часть кода? Хорошая практика разделять собственный код от основного мира, чтобы избежать сайд-эффектов. Строка, которую мы передаем в функцию, является нашим кодом, а `Println` сайд-эффектом и выводит результат на экран.
 
-So let's separate these concerns so it's easier to test
+Давайте разделим эти две сущности для удобства тестирования:
 
 ```go
 package main
@@ -47,9 +47,9 @@ func main() {
 }
 ```
 
-We have created a new function again with `func` but this time we've added another keyword `string` in the definition. This means this function returns a `string`.
+Мы создали еще одну функцию с использованием `func`, но сейчас мы также добавили еще одно ключевое слово `string` в объявлении. Это значит, что функция должна возвращать тип данных `string`.
 
-Now create a new file called `hello_test.go` where we are going to write a test for our `Hello` function
+Теперь создадим новый файл `hello_test.go`, где напишем тест для нашей функции `Hello`.
 
 ```go
 package main
