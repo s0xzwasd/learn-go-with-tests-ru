@@ -93,33 +93,34 @@ go 1.16
 
 Обратите внимание, что вам не нужно выбирать между несколькими фреймворками для тестирования и затем разбираться с их установкой. В Go вам нужно использовать встроенные инструменты языка и писать тесты с тем же синтаксисом, как и остальной код.
 
-### Writing tests
+### Написание тестов
 
-Writing a test is just like writing a function, with a few rules
+Написание тестов это как написание обычных функций, где действует несколько правил:
 
-* It needs to be in a file with a name like `xxx_test.go`
-* The test function must start with the word `Test`
-* The test function takes one argument only `t *testing.T`
-* In order to use the `*testing.T` type, you need to `import "testing"`, like we did with `fmt` in the other file
+* Тест должен находится в файле с именем `*_test.go`
+* Название функции должно начинаться с ключевого слова `Test`
+* Функция принимает только один аргумент: `t *testing.T`
+* Для того чтобы использовать тип `t *testing.T`, вам нужно импортировать пакет `import "testing"` как мы уже делали для `fmt` в предыдущем примере
 
-For now, it's enough to know that your `t` of type `*testing.T` is your "hook" into the testing framework so you can do things like `t.Fail()` when you want to fail.
+На данный момент достаточно знать что `t` с типом `*testing.T` это ваш указатель на то, чтобы использовать тестовый фреймворк и вы можете использовать `t.Fail()`, чтобы тест был отмечен как не пройденный.
 
-We've covered some new topics:
+Мы также рассмотрели несколько новых понятий:
 
 #### `if`
-If statements in Go are very much like other programming languages.
 
-#### Declaring variables
+Условные ветвления в Go очень похожи на реализацию в других языках.
 
-We're declaring some variables with the syntax `varName := value`, which lets us re-use some values in our test for readability.
+#### Declaring variables Объявление переменных
+
+Мы объявляем какие-то переменные с помощью синтаксиса `varName := value`, который помогает нам переиспользовать какие-то значения в наших тестах и повышает читаемость кода.
 
 #### `t.Errorf`
 
-We are calling the `Errorf` _method_ on our `t` which will print out a message and fail the test. The `f` stands for format which allows us to build a string with values inserted into the placeholder values `%q`. When you made the test fail it should be clear how it works.
+Мы вызываем `Errof` _метод_ на аргументе `t` когда хотим вывести сообщение и провалить тест. Буква `f` отвечает за форматирование, которое позволяет нам создать строку и вставить в неё значения с помощью плейсхолдеров `%q`. Когда вы отмечаете тест как провальный, вам следует знать как это работает.
 
-You can read more about the placeholder strings in the [fmt go doc](https://golang.org/pkg/fmt/#hdr-Printing). For tests `%q` is very useful as it wraps your values in double quotes.
+Вы можете прочитать о плейсхолдерах в строках в [документации](https://golang.org/pkg/fmt/#hdr-Printing). Для тестов `%q` очень полезно, поскольку он оборачивает ваши значения в двойные кавычки.
 
-We will later explore the difference between methods and functions.
+В дальнейшем мы рассмотрим разницу между функциями и методами.
 
 ### Go doc
 
