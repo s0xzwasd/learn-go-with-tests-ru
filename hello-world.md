@@ -66,16 +66,16 @@ func TestHello(t *testing.T) {
 }
 ```
 
-## Go modules?
+## Go модули?
 
-The next step is to run the tests. Enter `go test` in your terminal. If the tests pass, then you are probably using an earlier version of Go. However, if you are using Go 1.16 or later, then the tests will likely not run at all. Instead, you will see an error message like this in the terminal:
+Следующим шагом будет запуск самих тестов. Введите `go test` в интерфейсе командной строки. Если тесты отмечены как пройденные, тогда вы скорее всего используете устаревшею версию Go. Однако, если вы используете Go версии 1.16 и выше, то тогда тесты не должны совсем запуститься. Вместо этого, вы должны увидеть следующее сообщение:
 
 ```shell
 $ go test
 go: cannot find main module; see 'go help modules'
 ```
 
-What's the problem? In a word, [modules](https://blog.golang.org/go116-module-changes). Luckily, the problem is easy to fix. Enter `go mod init hello` in your terminal. That will create a new file with the following contents:
+В чем проблема? Если коротко, в [модулях](https://blog.golang.org/go116-module-changes). К счастью, проблему легко исправить. Введите `go mod init` в терминале. Команда создаст новый файл с содержимым:
 
 ```
 module hello
@@ -83,9 +83,9 @@ module hello
 go 1.16
 ```
 
-This file tells the `go` tools essential information about your code. If you planned to distribute your application, you would include where the code was available for download as well as information about dependencies. For now, your module file is minimal, and you can leave it that way. To read more about modules, [you can check out the reference in the Golang documentation](https://golang.org/doc/modules/gomod-ref). We can get back to testing and learning Go now since the tests should run, even on Go 1.16.
+Этот файл передает инструментам `go` основную информацию о вашем проекте. Если вы планируете выкладывать ваше приложение, к примеру на Github, вам нужно включить информацию об этом, а также информацию о зависимостях проекта. На данный момент файл содержит минимальное количество данных, и вы можете оставить его в таком виде. Для большего изучения модулей, вы можете обратиться к соответствующему разделу в [документации](https://golang.org/doc/modules/gomod-ref). Теперь вернемся к тестированию и изучению Go, поскольку теперь тесты должны запуститься даже на 1.16 версии Go.
 
-In future chapters you will need to run `go mod init SOMENAME` in each new folder before running commands like `go test` or `go build`.
+В следующих разделах вам нужно выполнить `go mod init name` самостоятельно в каждой новой директории перед выполнением команд `go test` и `go build`
 
 ## Back to Testing
 
