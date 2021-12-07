@@ -87,11 +87,11 @@ go 1.16
 
 В следующих разделах вам нужно выполнить `go mod init name` самостоятельно в каждой новой директории перед выполнением команд `go test` и `go build`
 
-## Back to Testing
+## Вернемся к тестированию
 
-Run `go test` in your terminal. It should've passed! Just to check, try deliberately breaking the test by changing the `want` string.
+Запустите `go test` в вашем терминале. Тесты должны пройти успешно! Для убедительности попробуйте "сломать" тест изменив содержимое строки в `want`.
 
-Notice how you have not had to pick between multiple testing frameworks and then figure out how to install. Everything you need is built in to the language and the syntax is the same as the rest of the code you will write.
+Обратите внимание, что вам не нужно выбирать между несколькими фреймворками для тестирования и затем разбираться с их установкой. В Go вам нужно использовать встроенные инструменты языка и писать тесты с тем же синтаксисом, как и остальной код.
 
 ### Writing tests
 
