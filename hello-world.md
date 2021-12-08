@@ -124,11 +124,11 @@ go 1.16
 
 ### Go doc
 
-Another quality of life feature of Go is the documentation. You can launch the docs locally by running `godoc -http :8000`. If you go to [localhost:8000/pkg](http://localhost:8000/pkg) you will see all the packages installed on your system.
+Другая сильная сторона Go – документация. Вы можете открыть её локально запустив `godoc -http :8000`. Затем, если вы перейдете на [localhost:8000/pkg](http://localhost:8000/pkg), то увидите список всех пакетов, установленных на вашем устройстве.
 
-The vast majority of the standard library has excellent documentation with examples. Navigating to [http://localhost:8000/pkg/testing/](http://localhost:8000/pkg/testing/) would be worthwhile to see what's available to you.
+Основная сила стандартных библиотек это отличная документация с примерами. Перейдите к [http://localhost:8000/pkg/testing/](http://localhost:8000/pkg/testing/) и посмотрите, какое количество полезной и качественной информации доступно для вас.
 
-If you don't have `godoc` command, then maybe you are using the newer version of Go (1.14 or later) which is [no longer including `godoc`](https://golang.org/doc/go1.14#godoc). You can manually install it with `go get golang.org/x/tools/cmd/godoc`.
+Если вам не удается запустить `godoc` команду, тогда вы используете Go версии 1.14 и выше, поэтому утилита не включена по-умолчанию](https://golang.org/doc/go1.14#godoc). Вы можете установить `godoc` самостоятельно с помощью `go install golang.org/x/tools/cmd/godoc`.
 
 ### Hello, YOU
 
