@@ -130,15 +130,15 @@ go 1.16
 
 Если вам не удается запустить `godoc` команду, тогда вы используете Go версии 1.14 и выше, поэтому утилита [не включена по-умолчанию](https://golang.org/doc/go1.14#godoc). Вы можете установить `godoc` самостоятельно с помощью `go install golang.org/x/tools/cmd/godoc`.
 
-### Hello, YOU
+### Привет, <USERNAME>
 
-Now that we have a test we can iterate on our software safely.
+Теперь у нас есть тест и мы можем продолжать улучшать свой код безопасно.
 
-In the last example we wrote the test _after_ the code had been written just so you could get an example of how to write a test and declare a function. From this point on we will be _writing tests first_.
+В последнем примере мы написали тест после основного кода лишь для примера, чтобы показать как пишутся тесты и объявляются функции. С этого момента _мы начинаем писать сначала тесты_, а потом основной код.
 
-Our next requirement is to let us specify the recipient of the greeting.
+Следующим заданием будет возможность указать получателя приветствия.
 
-Let's start by capturing these requirements in a test. This is basic test driven development and allows us to make sure our test is _actually_ testing what we want. When you retrospectively write tests there is the risk that your test may continue to pass even if the code doesn't work as intended.
+Давайте соберем все требования в тест. Это базы TDD и они позволяют нам убедится в том, что наш тест _действительно_ проверяет то, что мы хотим. Когда вы сначала пишете код, а затем тесты, всегда есть риск того что ваши тесты могут отображаться как пройденные даже в случае, если код не работает как задумано.
 
 ```go
 package main
@@ -155,7 +155,7 @@ func TestHello(t *testing.T) {
 }
 ```
 
-Now run `go test`, you should have a compilation error
+Теперь запустим `go test` и вы должны получить следующую ошибку компиляции:
 
 ```text
 ./hello_test.go:6:18: too many arguments in call to Hello
@@ -163,11 +163,11 @@ Now run `go test`, you should have a compilation error
     want ()
 ```
 
-When using a statically typed language like Go it is important to _listen to the compiler_. The compiler understands how your code should snap together and work so you don't have to.
+Когда мы работаем с языком со статичиской типизацией, важно слушать что говорит компилятор. Компилятор понимает как ваш код должен взаимодействовать и работать.
 
-In this case the compiler is telling you what you need to do to continue. We have to change our function `Hello` to accept an argument.
+В этом случае компилятор гооврит нам, что нужно сделать. Требуется изменить нашу функцию `Hello`, чтобы она принимала аргумент.
 
-Edit the `Hello` function to accept an argument of type string
+Изменив функцию `Hello`, чтобы она принимала аргумент с типом `string`:
 
 ```go
 func Hello(name string) string {
@@ -175,7 +175,7 @@ func Hello(name string) string {
 }
 ```
 
-If you try and run your tests again your `hello.go` will fail to compile because you're not passing an argument. Send in "world" to make it compile.
+Если вы попробуете запустить тесты ещё раз, `hello.go` не будет скомпилирован поскольку вы не передаете никакого параметра. Передайте слово "world" в функцию `Hello`, чтобы ваш код скомпилировался:
 
 ```go
 func main() {
@@ -183,15 +183,15 @@ func main() {
 }
 ```
 
-Now when you run your tests you should see something like
+Теперь при запуске тестов вы должны увидеть следующее сообщение:
 
 ```text
 hello_test.go:10: got 'Hello, world' want 'Hello, Chris''
 ```
 
-We finally have a compiling program but it is not meeting our requirements according to the test.
+Нам удалось скомпилировать приложение, но оно не проходит по нашим критериям, которые мы указали в тесте.
 
-Let's make the test pass by using the name argument and concatenate it with `Hello,`
+Давайте сделаем тест успешным, используя имя аргумента и добавим его со строкой `Hello,`:
 
 ```go
 func Hello(name string) string {
@@ -199,7 +199,7 @@ func Hello(name string) string {
 }
 ```
 
-When you run the tests they should now pass. Normally as part of the TDD cycle we should now _refactor_.
+Теперь при запуске тестов они должны отмечаться как пройденные. Обычная часть TDD-цикла: рефакторинг, который мы проделали.
 
 ### A note on source control
 
